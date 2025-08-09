@@ -1,0 +1,28 @@
+{
+  "name": "dom-processor",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Process DOM recursively like XSLT",
+
+  "type": "module",
+  "exports": {
+    ".":{
+      "import": "./dist/index.js",
+      "require": "dist/index.cjs",
+      "types": "dist/index.d.ts"
+    }
+  },
+
+  "scripts" : {
+    "build" : "tsup src/index.ts --format cjs,esm --dts"
+  },
+
+  "devDependencies": {
+    "@types/bun": "latest",
+    "tsup": "^8.5.0"
+  },
+
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
